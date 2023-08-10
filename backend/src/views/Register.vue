@@ -64,24 +64,15 @@
       }
     },
     methods: {
-      handleSubmit(){
-        const data = {
+      async handleSubmit(){
+        const response = await axios.post('register', {
           username: this.username,
           email: this.email,
           password: this.password,
           password_confirmation: this.password_confirmation
-        };
-
-        axios.post('http://localhost:8000/api/register', data)
-        .then(
-          res => {
-            console.log(res)
-          }
-        ).catch(
-          err => {
-            console.log(err)
-          }
-        )
+        });
+        
+        this.$router.push('/login');
       }
     }
     
