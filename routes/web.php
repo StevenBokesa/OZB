@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\FileUpload;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/upload-file', [FileUpload::class, 'createForm']);
+Route::post('/upload-file', [FileUpload::class, 'fileUpload'])->name('fileUpload');
 
 Route::get('/', function () {
     return view('welcome');
