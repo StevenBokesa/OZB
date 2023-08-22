@@ -6,6 +6,7 @@ import ProductListing from "../views/ProductListing.vue";
 import ProductDescription from "../views/ProductDescription.vue";
 
 
+
 const routes = [
   {
     path: '/login',
@@ -27,6 +28,12 @@ const routes = [
     name: 'productDescription',
     component: ProductDescription
   },
+  {
+    path: '/product',
+    name: 'productListing',
+    component: ProductListing
+  },
+
 ];
 
 const router = createRouter({
