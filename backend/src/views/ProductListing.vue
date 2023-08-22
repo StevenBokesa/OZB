@@ -4,6 +4,7 @@
     <ul>
       <li v-for="item in items" :key="item.id">{{ item.name }} {{ item.description }}</li>
     </ul>
+    <div v-if="isLoading" class="loading">Loading...</div>
   </div>
 </template>
 
@@ -41,4 +42,10 @@ export default {
   height: 400px;
   overflow-y: scroll;
 }
+
+.loading {
+  text-align: center;
+  padding: 10px;
+}
+
 </style>

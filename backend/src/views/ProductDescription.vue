@@ -23,9 +23,4 @@ export default {
   overflow-y: scroll;
 }
 
-.loading {
-  text-align: center;
-  padding: 10px;
-}
-
 </style>
